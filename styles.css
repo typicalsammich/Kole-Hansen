@@ -298,3 +298,48 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
     background-position:center center !important;
   }
 }
+
+/* V9 — corrected REAL SITE mobile hero.
+   Exactly one visible truck photo, scaled to show its full width. */
+@media(max-width:850px){
+  .hero{
+    min-height:760px !important;
+    background-image:url('assets/hero-truck-mobile-v2.jpg') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+    background-color:#061321 !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+  .hero::after{
+    content:none !important;
+    display:none !important;
+    background:none !important;
+  }
+  .hero::before{
+    content:"" !important;
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:0 !important;
+    background:
+      linear-gradient(90deg,rgba(2,10,21,.84) 0%,rgba(2,10,21,.58) 48%,rgba(2,10,21,.18) 100%),
+      linear-gradient(0deg,rgba(2,10,21,.62) 0%,rgba(2,10,21,.08) 75%) !important;
+  }
+  .hero-inner{
+    position:relative !important;
+    z-index:1 !important;
+    width:min(100% - 44px,1200px) !important;
+    margin:auto !important;
+    padding:70px 0 !important;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    min-height:760px !important;
+    background-image:url('assets/hero-truck-mobile-v2.jpg') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+  }
+}
