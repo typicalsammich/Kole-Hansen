@@ -104,3 +104,59 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
   }
   .hero-inner{padding-top:300px}
 }
+
+/* V5: mobile hero mirrors the desktop composition */
+@media(max-width:850px){
+  .hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    background-image:url('assets/hero-truck.png');
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-color:#061321;
+  }
+  .hero:before{
+    background:
+      linear-gradient(90deg,
+        rgba(2,10,21,.91) 0%,
+        rgba(2,10,21,.74) 45%,
+        rgba(2,10,21,.24) 78%,
+        rgba(2,10,21,.14) 100%);
+  }
+  .hero-inner{
+    width:min(100% - 44px,1200px);
+    margin:auto;
+    padding:72px 0;
+  }
+  .hero-copy{
+    max-width:86%;
+  }
+  .hero h1{
+    font-size:clamp(2.75rem,12vw,4.7rem);
+  }
+  .hero .lead{
+    font-size:1rem;
+    line-height:1.62;
+    max-width:92%;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    min-height:660px;
+    /* Keep the truck visually complete instead of zooming into the center */
+    background-size:auto 100%;
+    background-position:center center;
+  }
+  .hero:before{
+    background:
+      linear-gradient(90deg,
+        rgba(2,10,21,.90) 0%,
+        rgba(2,10,21,.68) 52%,
+        rgba(2,10,21,.20) 100%),
+      linear-gradient(0deg,rgba(2,10,21,.35),rgba(2,10,21,.08));
+  }
+  .hero-inner{padding:58px 0}
+  .hero-copy{max-width:90%}
+}
