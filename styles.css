@@ -160,3 +160,54 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
   .hero-inner{padding:58px 0}
   .hero-copy{max-width:90%}
 }
+
+/* V6 mobile hero — show the full truck width while keeping copy over the hero */
+@media(max-width:850px){
+  .hero{
+    position:relative;
+    min-height:760px;
+    overflow:hidden;
+    isolation:isolate;
+    background:
+      linear-gradient(90deg,rgba(2,10,21,.78),rgba(2,10,21,.35)),
+      url('assets/hero-truck.png') center center / cover no-repeat;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    inset:0;
+    background-image:url('assets/hero-truck.png');
+    background-repeat:no-repeat;
+    background-position:center 8%;
+    background-size:100% auto;
+  }
+  .hero:before{
+    z-index:0;
+    background:
+      linear-gradient(90deg,rgba(2,10,21,.86) 0%,rgba(2,10,21,.60) 52%,rgba(2,10,21,.24) 100%),
+      linear-gradient(0deg,rgba(2,10,21,.72) 0%,rgba(2,10,21,.12) 72%);
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    width:min(100% - 44px,1200px);
+    padding:118px 0 72px;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    min-height:760px;
+    background:
+      linear-gradient(90deg,rgba(2,10,21,.80),rgba(2,10,21,.38)),
+      url('assets/hero-truck.png') center center / cover no-repeat;
+  }
+  .hero::after{
+    background-size:100% auto;
+    background-position:center 6%;
+  }
+  .hero-inner{padding:108px 0 64px}
+  .hero-copy{max-width:94%}
+  .hero h1{font-size:clamp(2.65rem,11.5vw,4rem)}
+  .hero .lead{font-size:.98rem;line-height:1.58}
+}
