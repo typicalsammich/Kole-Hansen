@@ -343,3 +343,27 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
     background-position:center center !important;
   }
 }
+
+/* V10 — remove mobile hero empty bands; continuous photographic background */
+@media(max-width:850px){
+  .hero{
+    min-height:760px !important;
+    background-image:url('assets/hero-truck-mobile-v3.jpg') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+  }
+  .hero::after{content:none !important;display:none !important}
+  .hero::before{
+    background:
+      linear-gradient(90deg,rgba(2,10,21,.80) 0%,rgba(2,10,21,.54) 48%,rgba(2,10,21,.16) 100%),
+      linear-gradient(0deg,rgba(2,10,21,.46) 0%,rgba(2,10,21,.04) 78%) !important;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    background-image:url('assets/hero-truck-mobile-v3.jpg') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+  }
+}
