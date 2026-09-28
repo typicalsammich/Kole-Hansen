@@ -70,3 +70,37 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
   .hero{background-size:100% auto;background-position:center top}
   .hero-inner{padding-top:285px}
 }
+
+/* V4 mobile hero: true background image, with a wide truck composition */
+@media(max-width:850px){
+  .hero{
+    min-height:760px;
+    background-image:url('assets/hero-truck.png');
+    background-size:auto 52%;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-color:#061321;
+    align-items:flex-end;
+  }
+  .hero:before{
+    background:
+      linear-gradient(180deg,
+        rgba(2,10,21,.04) 0%,
+        rgba(2,10,21,.08) 30%,
+        rgba(2,10,21,.60) 50%,
+        rgba(2,10,21,.97) 66%,
+        #061321 100%);
+  }
+  .hero-inner{
+    width:min(100% - 44px,1200px);
+    padding:330px 0 72px;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    min-height:780px;
+    background-size:auto 46%;
+    background-position:center top;
+  }
+  .hero-inner{padding-top:300px}
+}
