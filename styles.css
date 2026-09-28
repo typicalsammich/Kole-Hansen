@@ -257,3 +257,44 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
   .hero::after{content:none !important;display:none !important}
   .hero-inner{padding:62px 0}
 }
+
+/* V8 — dedicated mobile crop made from the full truck photo.
+   One background image; no duplicate layers and no CSS zooming. */
+@media(max-width:850px){
+  .hero{
+    min-height:720px !important;
+    background-image:url('assets/hero-truck-mobile.jpg') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+    background-color:#061321 !important;
+  }
+  .hero::after{
+    content:none !important;
+    display:none !important;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:
+      linear-gradient(90deg,
+        rgba(2,10,21,.86) 0%,
+        rgba(2,10,21,.64) 48%,
+        rgba(2,10,21,.22) 100%) !important;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    padding:70px 0 !important;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    min-height:720px !important;
+    background-image:url('assets/hero-truck-mobile.jpg') !important;
+    background-size:cover !important;
+    background-position:center center !important;
+  }
+}
