@@ -462,3 +462,20 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
   .hero .lead{font-size:.91rem !important;line-height:1.45 !important}
   .trust{display:flex !important;gap:10px 18px !important}
 }
+
+/* V13 — mobile hero focal point: front/cab of truck */
+@media(max-width:850px){
+  .hero{
+    min-height:610px !important;
+    background-image:url('assets/hero-truck.png') !important;
+    background-size:cover !important;
+    background-repeat:no-repeat !important;
+    background-position:82% center !important;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    min-height:600px !important;
+    background-position:86% center !important;
+  }
+}
