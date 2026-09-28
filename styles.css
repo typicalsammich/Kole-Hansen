@@ -367,3 +367,43 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
     background-position:center center !important;
   }
 }
+
+/* V11 — literal full-truck mobile background: one image, zero crop, zero filler */
+@media(max-width:850px){
+  .hero{
+    min-height:720px !important;
+    background-image:url('assets/hero-truck.png') !important;
+    background-repeat:no-repeat !important;
+    background-position:center center !important;
+    background-size:100% 100% !important;
+    background-color:#061321 !important;
+  }
+  .hero::after{
+    content:none !important;
+    display:none !important;
+    background:none !important;
+  }
+  .hero::before{
+    content:"" !important;
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:0 !important;
+    background:
+      linear-gradient(90deg,rgba(2,10,21,.82) 0%,rgba(2,10,21,.56) 47%,rgba(2,10,21,.14) 100%),
+      linear-gradient(0deg,rgba(2,10,21,.40) 0%,rgba(2,10,21,.02) 80%) !important;
+  }
+  .hero-inner{
+    position:relative !important;
+    z-index:1 !important;
+    padding:64px 0 !important;
+  }
+}
+@media(max-width:520px){
+  .hero{
+    min-height:720px !important;
+    background-image:url('assets/hero-truck.png') !important;
+    background-size:100% 100% !important;
+    background-position:center center !important;
+  }
+}
