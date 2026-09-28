@@ -211,3 +211,49 @@ footer{padding:55px 22px;background:#030a12;border-top:1px solid #1c3044}.footer
   .hero h1{font-size:clamp(2.65rem,11.5vw,4rem)}
   .hero .lead{font-size:.98rem;line-height:1.58}
 }
+
+/* V7 — SINGLE mobile hero background, wider truck framing */
+@media(max-width:850px){
+  .hero{
+    position:relative;
+    min-height:720px;
+    overflow:hidden;
+    isolation:isolate;
+    display:flex;
+    align-items:center;
+    background-image:url('assets/hero-truck.png') !important;
+    background-repeat:no-repeat !important;
+    background-size:auto 82% !important;
+    background-position:center center !important;
+    background-color:#061321 !important;
+  }
+  .hero::after{content:none !important;display:none !important;background:none !important}
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:linear-gradient(90deg,
+      rgba(2,10,21,.86) 0%,
+      rgba(2,10,21,.67) 48%,
+      rgba(2,10,21,.25) 100%) !important;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    width:min(100% - 44px,1200px);
+    margin:auto;
+    padding:72px 0;
+  }
+  .hero-copy{max-width:92%}
+}
+@media(max-width:520px){
+  .hero{
+    min-height:700px;
+    background-image:url('assets/hero-truck.png') !important;
+    background-size:auto 72% !important;
+    background-position:center center !important;
+  }
+  .hero::after{content:none !important;display:none !important}
+  .hero-inner{padding:62px 0}
+}
